@@ -68,6 +68,10 @@
                               <input type="text" name="nama" class="form-control" id="nama" placeholder="Enter Nama Lengkap">
                             </div>
                             <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
                                     <label for="jenisKelamin">Jenis Kelamin</label>
                                     <select class="form-control" name="jenisKelamin" id="jenisKelamin">
                                       <option>L</option>

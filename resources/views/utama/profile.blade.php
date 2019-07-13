@@ -14,14 +14,14 @@
 								<div class="profile-header">
 									<div class="overlay"></div>
 									<div class="profile-main">
-										<img src="{{asset('images/'.$siswa->avatar)}}" class="img-circle" alt="Avatar">
+										<img src="{{$siswa->getAvatar()}}" width="184px" height="184px" class="img-circle" alt="Avatar">
 										<h3 class="name">{{$siswa->nama}}</h3>
 										<span class="online-status status-available">Available</span>
 									</div>
 									<div class="profile-stat">
 										<div class="row">
 											<div class="col-md-4 stat-item">
-												45 <span>Projects</span>
+												{{$siswa->mapel->count()}} <span>Mata Pelajaran</span>
 											</div>
 											<div class="col-md-4 stat-item">
 												15 <span>Awards</span>
@@ -55,31 +55,40 @@
 								<!-- TABBED CONTENT -->
 								<div class="custom-tabs-line tabs-line-bottom left-aligned">
 									<ul class="nav" role="tablist">
-										<li class="active"><a href="#tab-bottom-left1" role="tab" data-toggle="tab">Recent Activity</a></li>
+										<li class="active"><a href="#tab-bottom-left1" role="tab" data-toggle="tab"> Mata Pelajaran </a></li>
 									</ul>
 								</div>
 								<div class="tab-content">
-									<div class="tab-pane fade in active" id="tab-bottom-left1">
-										<ul class="list-unstyled activity-timeline">
-											<li>
-												<i class="fa fa-comment activity-icon"></i>
-												<p>Commented on post <a href="#">Prototyping</a> <span class="timestamp">2 minutes ago</span></p>
-											</li>
-											<li>
-												<i class="fa fa-cloud-upload activity-icon"></i>
-												<p>Uploaded new file <a href="#">Proposal.docx</a> to project <a href="#">New Year Campaign</a> <span class="timestamp">7 hours ago</span></p>
-											</li>
-											<li>
-												<i class="fa fa-plus activity-icon"></i>
-												<p>Added <a href="#">Martin</a> and <a href="#">3 others colleagues</a> to project repository <span class="timestamp">Yesterday</span></p>
-											</li>
-											<li>
-												<i class="fa fa-check activity-icon"></i>
-												<p>Finished 80% of all <a href="#">assigned tasks</a> <span class="timestamp">1 day ago</span></p>
-											</li>
-										</ul>
-										<div class="margin-top-30 text-center"><a href="#" class="btn btn-default">See all activity</a></div>
-									</div>
+									<table class="table table-striped">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>First Name</th>
+												<th>Last Name</th>
+												<th>Username</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>Steve</td>
+												<td>Jobs</td>
+												<td>@steve</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>Simon</td>
+												<td>Philips</td>
+												<td>@simon</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>Jane</td>
+												<td>Doe</td>
+												<td>@jane</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 								<!-- END TABBED CONTENT -->
 							</div>
